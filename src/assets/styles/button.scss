@@ -1,91 +1,77 @@
 .mat-button-base{
   font-family: $font-families-default;
   font-weight: 400;
-  font-size: var(--fs-base);
-}
-button.mat-raised-button.mat-button-base.mat-primary {
-  background: #0070C4;
-  border-radius: 4px;
-  color: #FFFFFF;
-  &:hover {
-    background: #004F84;
-  }
-  &:focus {
-    background: #004F84;
-    /* Interactive/Focus */
-    border: 3px solid #FEBA35;
-    border-radius: 4px;
-  }
-  &.mat-button-disabled {
-    background: rgba(0, 112, 196, 0.5);
-    border-radius: 4px;
-  }
-}
-button.mat-raised-button.mat-button-base.mat-warn {
-  background: #DA291C;
-  border-radius: 4px;
-  color: #FFFFFF;
-  &:not(.mat-button-disabled) {
-    &:hover {
-      background: #B00000;
-      border-radius: 4px;
-    }
-    &:focus {
-      background: #B00000;
-      /* Interactive/Focus */
-      border: 3px solid #FEBA35;
-      border-radius: 4px;
+  font-size: $font-size-4;
+  border-radius: $border-radius-4 * 1px;
+  &.mat-button{
+    &.mat-primary {
+      text-align: center;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+      /* Interactive/Default */
+      color: $colour-interactive-default;
+      &:hover{
+        background: $colour-greyscale-100;
+      }
+      &:focus {
+        background: $colour-greyscale-100;
+        /* Interactive/Focus */
+        border: ($border-width-l * 1px) solid $colour-interactive-focus;
+      }
+      &.mat-button-disabled {
+        color: rgba(0, 112, 196, 0.5);
+        background:inherit;
+      }
     }
   }
-
-  &.mat-button-disabled {
-    background: rgba(218, 41, 28, 0.5);
-    border-radius: 4px;
+  &.mat-raised-button {
+    color: $colour-text-light;
+    &.mat-primary {
+      background: $colour-interactive-default;
+      &:hover {
+        background: $colour-interactive-hover;
+      }
+      &:focus {
+        background: $colour-interactive-hover;
+        border: ($border-width-l * 1px) solid $colour-interactive-focus;
+      }
+      &.mat-button-disabled {
+        background: rgba(0, 112, 196, 0.5);
+        color: $colour-text-light;
+      }
+    }
+    &.mat-warn {
+      background: $colour-interactive-error;
+      &:not(.mat-button-disabled) {
+        &:hover {
+          background: $colour-status-emergency-dark;
+        }
+        &:focus {
+          background: $colour-status-emergency-dark;
+          /* Interactive/Focus */
+          border: ($border-width-l * 1px) solid $colour-interactive-focus;
+        }
+      }
+      &.mat-button-disabled {
+        background: rgba(218, 41, 28, 0.5);
+        color: $colour-text-light;
+      }
+    }
   }
-}
-button.mat-stroked-button.mat-button-base.mat-primary {
-  background: #FFFFFF;
-  /* Interactive/Default */
-  border: 2px solid #0070C4;
-  border-radius: 4px;
-  &:hover{
-    background: #F1F1F1;
-    /* Interactive/Hover */
-    border: 2px solid #004F84;
-  }
-  &:focus {
-    background: #F1F1F1;
-    /* Interactive/Hover */
-    border: 2px solid #004F84;
-    border-radius: 4px;
-  }
-  &.mat-button-disabled {
-    background: #FFFFFF;
-    /* Disabled (0.5 opacity interactive) */
-
-    border: 2px solid rgba(0, 112, 196, 0.5);
-    border-radius: 4px;
-    color: rgba(0, 112, 196, 0.5);
-  }
-}
-button.mat-button.mat-button-base.mat-primary {
-  text-align: center;
-  letter-spacing: 0.01em;
-  text-decoration-line: underline;
-  /* Interactive/Default */
-  color: #0070C4;
-  &:hover{
-    background: #F1F1F1;
-  }
-  &:focus {
-    background: #F1F1F1;
-    /* Interactive/Focus */
-
-    border: 3px solid #FEBA35;
-    border-radius: 4px;
-  }
-  &.mat-button-disabled {
-    color: rgba(0, 112, 196, 0.5);
-    background:inherit;
+  &.mat-stroked-button {
+    background: $colour-text-light;
+    .mat-primary {
+      border: ($border-width-m * 1px) solid $colour-interactive-default;
+      &:hover, &:focus{
+        background: $colour-greyscale-100;
+        /* Interactive/Hover */
+        border: ($border-width-m * 1px) solid $colour-interactive-hover;
+      }
+      &.mat-button-disabled {
+        background: $colour-text-light;
+        border: ($border-width-m * 1px) solid rgba(0, 112, 196, 0.5);
+        color: rgba(0, 112, 196, 0.5);
+      }
+    }
   }
 }

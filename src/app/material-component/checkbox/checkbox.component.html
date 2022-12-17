@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Checkbox</mat-card-title>
+    <h4>Basic
+      <br/>
+      <code class="bg-light">&lt;mat-checkbox color="primary" [(ngModel)]="iceCreamChecked"&gt;Ice-cream&lt;/mat-checkbox&gt;</code>
+    </h4>
+    <section class="example-section">
+      <mat-checkbox color="primary" [(ngModel)]="iceCreamChecked">Ice-cream</mat-checkbox>
+    </section>
+    <h4>Disabled
+      <br/>
+      <code class="bg-light">
+        &lt;mat-checkbox color="primary" [disabled]="true"&gt;Ice-cream&lt;/mat-checkbox&gt;
+      </code>
+    </h4>
+    <section class="example-section">
+      <mat-checkbox color="primary" [disabled]="true">Ice-cream</mat-checkbox>
+    </section>
+    <h4>Error</h4>
+    <section class="example-section">
+      <mat-checkbox color="warn" [(ngModel)]="iceCreamChecked">Ice-cream</mat-checkbox>
+    </section>
+  </mat-card-content>
+</mat-card>

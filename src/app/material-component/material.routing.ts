@@ -16,11 +16,16 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import {CheckboxComponent} from './checkbox/checkbox.component';
 
 export const MaterialRoutes: Routes = [
   {
     path: 'button',
     component: ButtonsComponent
+  },
+  {
+    path: 'checkbox',
+    component: CheckboxComponent
   },
   {
     path: 'grid',

@@ -28,7 +28,7 @@ export class ChipsComponent {
   // Enter, comma
   separatorKeysCodes = [ENTER, COMMA];
 
-  fruits = [{ name: 'Lemon' }, { name: 'Lime' }, { name: 'Apple' }];
+  fruits = [{ name: 'Fritos' }, { name: 'Lays' }];
 
   add(event: MatChipInputEvent): void {
     const input = event.input;

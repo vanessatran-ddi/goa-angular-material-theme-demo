@@ -11,6 +11,7 @@ const MENUITEMS = [
   { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
   { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   { state: 'checkbox', type: 'link', name: 'Checkboxes', icon: 'view_comfy'},
+  { state: 'chips', type: 'link', name: 'Chips', icon: 'vignette' },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
   { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
   { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },
@@ -22,7 +23,7 @@ const MENUITEMS = [
     name: 'Expansion Panel',
     icon: 'vertical_align_center'
   },
-  { state: 'chips', type: 'link', name: 'Chips', icon: 'vignette' },
+
   { state: 'toolbar', type: 'link', name: 'Toolbar', icon: 'voicemail' },
   {
     state: 'progress-snipper',

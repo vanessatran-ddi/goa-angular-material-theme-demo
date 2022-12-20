@@ -32,6 +32,7 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
+import {ContainerComponent} from './container/container.component';
 
 @NgModule({
   imports: [
@@ -49,6 +50,7 @@ import {CheckboxComponent} from './checkbox/checkbox.component';
   declarations: [
     ButtonsComponent,
     CheckboxComponent,
+    ContainerComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,

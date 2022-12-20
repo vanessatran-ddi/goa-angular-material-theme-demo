@@ -17,6 +17,7 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
+import {ContainerComponent} from "./container/container.component";
 
 export const MaterialRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'checkbox',
     component: CheckboxComponent
+  },
+  {
+    path: 'container',
+    component: ContainerComponent
   },
   {
     path: 'grid',

@@ -12,6 +12,18 @@ const MENUITEMS = [
   { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   { state: 'checkbox', type: 'link', name: 'Checkboxes', icon: 'view_comfy'},
   { state: 'chips', type: 'link', name: 'Chips', icon: 'vignette' },
+  {
+    state: 'progress-snipper',
+    type: 'link',
+    name: 'Circular Progress',
+    icon: 'border_horizontal'
+  },
+  {
+    state: 'container',
+    type: 'link',
+    name: 'Card',
+    icon: 'vertical_align_center'
+  },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
   { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
   { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },
@@ -25,12 +37,6 @@ const MENUITEMS = [
   },
 
   { state: 'toolbar', type: 'link', name: 'Toolbar', icon: 'voicemail' },
-  {
-    state: 'progress-snipper',
-    type: 'link',
-    name: 'Progress snipper',
-    icon: 'border_horizontal'
-  },
   {
     state: 'progress',
     type: 'link',

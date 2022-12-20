@@ -1,0 +1,173 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Container</mat-card-title>
+    <p>
+      Containers are used to group information, create hierarchy,
+      facilitate navigation, highlight a feature, or promote a call-to-action.
+      Containers should be easy to scan for relevant and actionable information.
+    </p>
+    <code class="bg-light">&lt;mat-card&gt;<br/>
+      &lt;mat-card-content&gt;<br/>
+      &lt;h2&gt;Interactive container&lt;/h2&gt;<br/>
+      &lt;p&gt;
+      Content
+      &lt;/p&gt;<br/>
+      &lt;/mat-card-content&gt;<br/>
+      &lt;/mat-card&gt;</code>
+    <h4>
+      Container Types
+    </h4>
+    <div fxLayout="row">
+      <div fxFlex.gt-sm="60%">
+        <mat-card>
+          <mat-card-content>
+            <h2>Interactive container</h2>
+            <p>
+              <code>
+                &lt;mat-card&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--non-interactive">
+          <mat-card-content>
+            <h2>Non-Interactive container</h2>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--non-interactive"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--info">
+          <mat-card-content>
+            <h2>Info container</h2>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--info"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--error">
+          <mat-card-content>
+            <h2>Error container</h2>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--error"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--success">
+          <mat-card-content>
+            <h2>Success container</h2>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--success"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--important">
+          <mat-card-content>
+            <h2>Important container</h2>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--important"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--important goa-container--accent-thin">
+          <mat-card-content>
+            <h2>Interactive Container w/ Header</h2>
+            <p>
+              If you use an accent, the background colour won't be filled in
+              <code>
+                &lt;mat-card class="goa-container--important goa-container--accent-thin"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <h4>Accent bar types (thick, thin, with text)</h4>
+        <mat-card class="goa-container--info goa-container--accent-thick">
+          <mat-card-content>
+            <h2>Heading</h2>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--info goa-container--accent-thick"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--non-interactive goa-container--accent-thick">
+          <mat-card-content>
+            <h2>Heading</h2>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--non-interactive goa-container--accent-thick"&gt;&lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <h4>Use the accent bar for grouping of content.</h4>
+        <mat-card class="goa-container--primary">
+          <mat-card-header>
+            Heading
+          </mat-card-header>
+          <mat-card-content>
+            <code>
+              &lt;mat-card class="goa-container--primary"&gt;<br/>
+              &lt;mat-card-header&gt;
+              Heading
+              &lt;/mat-card-header&gt;
+              &gt;mat-card-content&gt;&lt;/mat-card-content&gt;
+            </code>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="goa-container--non-interactive goa-container--accent">
+          <mat-card-header>
+            <mat-card-title-group>
+              Heading
+            </mat-card-title-group>
+            <div fxFlex></div>
+            <div fxLayoutAlign="center center">
+              <button mat-raised-button color="warn">Click me!</button>
+            </div>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              <code>
+                &lt;mat-card class="goa-container--non-interactive goa-container--accent"&gt;<br/>
+                  &lt;mat-card-header&gt;<br/>
+                    &lt;mat-card-title-group&gt;Heading&lt;/mat-card-title-group&gt;<br/>
+                    &lt;div fxFlex&gt;&lt;/div&gt;<br/>
+                    &lt;div fxLayoutAlign="center center"&gt;<br/>
+                      &lt;button mat-raised-button color="warn"&gt;Click me!&lt;/button&gt;<br/>
+                    &lt;/div&gt;<br/>
+                  &lt;/mat-card-header&gt;<br/>
+                &lt;/mat-card&gt;
+              </code>
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <h4>Container with container inside</h4>
+        <mat-card class="goa-container--info goa-container--accent-thin">
+          <mat-card-content>
+            <h2>Heading</h2>
+            <p>
+              Content
+            </p>
+            <mat-card class="goa-container--non-interactive">
+              <mat-card-content>
+                <h2>Heading</h2>
+                <p>Content</p>
+              </mat-card-content>
+            </mat-card>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

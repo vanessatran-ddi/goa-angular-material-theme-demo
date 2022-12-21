@@ -36,6 +36,12 @@ const MENUITEMS = [
     name: 'Icon Button',
     icon: 'view_comfy'
   },
+  {
+    state: 'input',
+    type: 'link',
+    name: 'Input',
+    icon: 'tab'
+  },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
   { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
   { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },

@@ -35,6 +35,7 @@ import {CheckboxComponent} from './checkbox/checkbox.component';
 import {ContainerComponent} from './container/container.component';
 import {DropdownComponent} from './dropdown/dropdown.component';
 import {IconButtonComponent} from './icon-button/icon-button.component';
+import {InputComponent} from "./input/input.component";
 
 @NgModule({
   imports: [
@@ -55,6 +56,7 @@ import {IconButtonComponent} from './icon-button/icon-button.component';
     ContainerComponent,
     DropdownComponent,
     IconButtonComponent,
+    InputComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,

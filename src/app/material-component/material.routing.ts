@@ -17,9 +17,10 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
-import {ContainerComponent} from "./container/container.component";
-import {DropdownComponent} from "./dropdown/dropdown.component";
-import {IconButtonComponent} from "./icon-button/icon-button.component";
+import {ContainerComponent} from './container/container.component';
+import {DropdownComponent} from './dropdown/dropdown.component';
+import {IconButtonComponent} from './icon-button/icon-button.component';
+import {InputComponent} from './input/input.component';
 
 export const MaterialRoutes: Routes = [
   {
@@ -41,6 +42,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'icon-button',
     component: IconButtonComponent
+  },
+  {
+    path: 'input',
+    component: InputComponent
   },
   {
     path: 'grid',

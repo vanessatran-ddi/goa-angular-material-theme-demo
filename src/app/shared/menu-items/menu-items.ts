@@ -30,6 +30,12 @@ const MENUITEMS = [
     name: 'Dropdown',
     icon: 'view_list'
   },
+  {
+    state: 'icon-button',
+    type: 'link',
+    name: 'Icon Button',
+    icon: 'view_comfy'
+  },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
   { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
   { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },

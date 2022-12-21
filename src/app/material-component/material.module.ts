@@ -34,6 +34,7 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
 import {ContainerComponent} from './container/container.component';
 import {DropdownComponent} from './dropdown/dropdown.component';
+import {IconButtonComponent} from './icon-button/icon-button.component';
 
 @NgModule({
   imports: [
@@ -53,6 +54,7 @@ import {DropdownComponent} from './dropdown/dropdown.component';
     CheckboxComponent,
     ContainerComponent,
     DropdownComponent,
+    IconButtonComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,

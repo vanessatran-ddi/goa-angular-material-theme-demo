@@ -24,6 +24,12 @@ const MENUITEMS = [
     name: 'Card',
     icon: 'vertical_align_center'
   },
+  {
+    state: 'dropdown',
+    type: 'link',
+    name: 'Dropdown',
+    icon: 'view_list'
+  },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
   { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
   { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },

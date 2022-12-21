@@ -18,6 +18,7 @@ import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
 import {ContainerComponent} from "./container/container.component";
+import {DropdownComponent} from "./dropdown/dropdown.component";
 
 export const MaterialRoutes: Routes = [
   {
@@ -31,6 +32,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'container',
     component: ContainerComponent
+  },
+  {
+    path: 'dropdown',
+    component: DropdownComponent
   },
   {
     path: 'grid',

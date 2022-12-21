@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class InputComponent {
   constructor() { }
+  public clickButton(): void {
+    alert('Hello');
+  }
 }

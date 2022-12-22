@@ -1,7 +1,7 @@
 <mat-card>
-	<mat-card-content>
-	<mat-card-title>Input</mat-card-title>
-			<mat-card-subtitle>Text fields let users enter and input text.</mat-card-subtitle>
+  <mat-card-content>
+    <mat-card-title>Input</mat-card-title>
+    <mat-card-subtitle>Text fields let users enter and input text.</mat-card-subtitle>
     <h4>Basic</h4>
     <code>
       &lt;mat-form-field&gt;&lt;mat-label&gt;Favourite Food&lt;/mat-label&gt;<br/>
@@ -16,13 +16,33 @@
         <input type="tel" matInput>
       </mat-form-field>
     </form>
-    <h4>Icon buttons</h4>
-    <mat-form-field class="example-form-field">
-      <mat-label>Clearable input</mat-label>
-      <input matInput type="text">
-      <button matSuffix mat-icon-button (click)="clickButton()">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-	</mat-card-content>
+    <h4>Disabled input</h4>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" disabled value="Disabled">
+      </mat-form-field>
+    </form>
+    <h4>Error state</h4>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input type="email" matInput [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput maxlength="5" value="12345">
+        <mat-hint align="start">5 is maximum</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
 </mat-card>

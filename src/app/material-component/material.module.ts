@@ -36,6 +36,7 @@ import {ContainerComponent} from './container/container.component';
 import {DropdownComponent} from './dropdown/dropdown.component';
 import {IconButtonComponent} from './icon-button/icon-button.component';
 import {InputComponent} from "./input/input.component";
+import {RadioComponent} from "./radio/radio.component";
 
 @NgModule({
   imports: [
@@ -57,6 +58,7 @@ import {InputComponent} from "./input/input.component";
     DropdownComponent,
     IconButtonComponent,
     InputComponent,
+    RadioComponent,
     GridComponent,
     ListsComponent,
     MenuComponent,

@@ -60,7 +60,7 @@
   }
   &.mat-stroked-button {
     background: $colour-text-light;
-    .mat-primary {
+    &.mat-primary {
       border: ($border-width-m * 1px) solid $colour-interactive-default;
       &:hover, &:focus{
         background: $colour-greyscale-100;

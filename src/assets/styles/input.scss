@@ -1,4 +1,4 @@
-input{
+textarea, input{
   &.mat-input-element {
     display: inline-block;
     color: var(--goa-color-text);
@@ -30,4 +30,11 @@ input{
 }
 .mat-form-field-invalid .mat-input-element {
  border: 2px solid var(--goa-color-interactive--error);
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  top: 2rem;
+  left: 0.5rem;
+}
+.mat-form-field-label:not(.mat-form-field-empty) {
+  top: 1.5rem;
 }

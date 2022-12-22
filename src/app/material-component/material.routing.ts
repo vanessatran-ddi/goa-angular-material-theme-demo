@@ -21,6 +21,7 @@ import {ContainerComponent} from './container/container.component';
 import {DropdownComponent} from './dropdown/dropdown.component';
 import {IconButtonComponent} from './icon-button/icon-button.component';
 import {InputComponent} from './input/input.component';
+import {RadioComponent} from "./radio/radio.component";
 
 export const MaterialRoutes: Routes = [
   {
@@ -42,6 +43,10 @@ export const MaterialRoutes: Routes = [
   {
     path: 'icon-button',
     component: IconButtonComponent
+  },
+  {
+    path: 'radio',
+    component: RadioComponent
   },
   {
     path: 'input',

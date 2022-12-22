@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 export interface Menu {
   state: string;
@@ -8,10 +8,10 @@ export interface Menu {
 }
 
 const MENUITEMS = [
- // { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
-  { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
-  { state: 'checkbox', type: 'link', name: 'Checkboxes', icon: 'view_comfy'},
-  { state: 'chips', type: 'link', name: 'Chips', icon: 'vignette' },
+  // { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
+  {state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5'},
+  {state: 'checkbox', type: 'link', name: 'Checkboxes', icon: 'view_comfy'},
+  {state: 'chips', type: 'link', name: 'Chips', icon: 'vignette'},
   {
     state: 'progress-snipper',
     type: 'link',
@@ -42,10 +42,22 @@ const MENUITEMS = [
     name: 'Input',
     icon: 'tab'
   },
- // { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
+  {
+    state: 'dialog',
+    type: 'link',
+    name: 'Dialog',
+    icon: 'assignment_turned_in'
+  },
+  {
+    state: 'radio',
+    type: 'link',
+    name: 'Radio',
+    icon: 'assignment_turned_in'
+  },
+  // { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
 //  { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
- // { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },
- // { state: 'tabs', type: 'link', name: 'Tabs', icon: 'tab' },
+  // { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },
+  // { state: 'tabs', type: 'link', name: 'Tabs', icon: 'tab' },
 //  { state: 'stepper', type: 'link', name: 'Stepper', icon: 'web' },
 //   {
 //     state: 'expansion',
@@ -61,12 +73,7 @@ const MENUITEMS = [
 //     name: 'Progress Bar',
 //     icon: 'blur_circular'
 //   },
-//   {
-//     state: 'dialog',
-//     type: 'link',
-//     name: 'Dialog',
-//     icon: 'assignment_turned_in'
-//   },
+
 //   { state: 'tooltip', type: 'link', name: 'Tooltip', icon: 'assistant' },
 //   { state: 'snackbar', type: 'link', name: 'Snackbar', icon: 'adb' },
 //   { state: 'slider', type: 'link', name: 'Slider', icon: 'developer_mode' },

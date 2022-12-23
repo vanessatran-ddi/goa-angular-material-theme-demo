@@ -16,9 +16,9 @@
               "rxjs-compat",
               "rxjs",
               "hammerjs",
-              "chartist"              
+              "chartist"
             ],
-            "outputPath": "dist",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",

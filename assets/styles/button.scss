@@ -1,0 +1,78 @@
+.mat-button-base{
+  font-family: $font-families-default;
+  font-weight: 400;
+  font-size: $font-size-4;
+  border-radius: $border-radius-4 * 1px;
+  &.mat-button{
+    &.mat-primary {
+      text-align: center;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+      /* Interactive/Default */
+      color: $colour-interactive-default;
+      &:hover{
+        background: $colour-greyscale-100;
+      }
+      &:focus {
+        background: $colour-greyscale-100;
+        /* Interactive/Focus */
+        border: ($border-width-l * 1px) solid $colour-interactive-focus;
+      }
+      &.mat-button-disabled {
+        color: rgba(0, 112, 196, 0.5);
+        background:inherit;
+      }
+    }
+  }
+  &.mat-raised-button {
+    color: $colour-text-light;
+    &.mat-primary {
+      background: $colour-interactive-default;
+      &:hover {
+        background: $colour-interactive-hover;
+      }
+      &:focus {
+        background: $colour-interactive-hover;
+        border: ($border-width-l * 1px) solid $colour-interactive-focus;
+      }
+      &.mat-button-disabled {
+        background: rgba(0, 112, 196, 0.5);
+        color: $colour-text-light;
+      }
+    }
+    &.mat-warn {
+      background: $colour-interactive-error;
+      &:not(.mat-button-disabled) {
+        &:hover {
+          background: $colour-status-emergency-dark;
+        }
+        &:focus {
+          background: $colour-status-emergency-dark;
+          /* Interactive/Focus */
+          border: ($border-width-l * 1px) solid $colour-interactive-focus;
+        }
+      }
+      &.mat-button-disabled {
+        background: rgba(218, 41, 28, 0.5);
+        color: $colour-text-light;
+      }
+    }
+  }
+  &.mat-stroked-button {
+    background: $colour-text-light;
+    &.mat-primary {
+      border: ($border-width-m * 1px) solid $colour-interactive-default;
+      &:hover, &:focus{
+        background: $colour-greyscale-100;
+        /* Interactive/Hover */
+        border: ($border-width-m * 1px) solid $colour-interactive-hover;
+      }
+      &.mat-button-disabled {
+        background: $colour-text-light;
+        border: ($border-width-m * 1px) solid rgba(0, 112, 196, 0.5);
+        color: rgba(0, 112, 196, 0.5);
+      }
+    }
+  }
+}
+

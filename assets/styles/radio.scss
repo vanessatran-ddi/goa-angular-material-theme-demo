@@ -1,0 +1,8 @@
+.mat-radio-button {
+  font-family: $font-families-default;
+}
+.mat-warn {
+  .mat-radio-outer-circle {
+   border: 2px solid var(--goa-color-status-emergency);
+  }
+}

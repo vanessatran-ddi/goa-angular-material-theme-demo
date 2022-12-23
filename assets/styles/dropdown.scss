@@ -1,0 +1,34 @@
+.mat-form-field {
+  font-family: var(--font-family);
+  font-size: var(--input-font-size);
+}
+
+.mat-form-field-type-mat-select {
+  .mat-form-field-label {
+    color: var(--goa-color-text);
+  }
+}
+
+.mat-select {
+  font-family: var(--font-family);
+  color: var(--goa-color-text);
+  background: transparent;
+}
+
+.mat-option-text {
+  font-family: var(--font-family);
+}
+
+.mat-option:hover:not(.mat-option-disabled) {
+  background: #f1f1f1;
+  color: #005072;
+}
+
+.mat-primary {
+  .mat-option {
+    &.mat-selected:not(.mat-option-disabled) {
+      background: #004F84;
+      color: #FFFFFF;
+    }
+  }
+}

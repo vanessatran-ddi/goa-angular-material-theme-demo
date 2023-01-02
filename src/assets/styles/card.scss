@@ -2,90 +2,100 @@
 Mat card
 *******************/
 .mat-card {
-  border: 1px solid var(--color-gray-200);
-  background-color: var(--color-white);
+  border: 1px solid $colour-greyscale-200;
+  background-color: $colour-greyscale-white;
   overflow: hidden;
-  box-shadow: var(--shadow-0);
   padding: 0 !important;
 
   .goa-container--non-interactive {
     &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
-      background: #f1f1f1;
-      border-color: #dcdcdc;
+      background: $colour-greyscale-100;
+      border-color: $colour-greyscale-200;
     }
+
     &.goa-container--accent-thin {
-      border-top: 0.5rem solid #dcdcdc;
+      border-top: $spacing-xs solid $colour-greyscale-200;
     }
+
     &.goa-container--accent-thick {
-      border-top: 1.5rem solid #dcdcdc;
+      border-top: $spacing-l solid $colour-greyscale-200;
     }
+
     .mat-card-header {
-      background-color: var(--color-gray-100);
-      border-color: var(--color-gray-200);
-      color: var(--color-black);
+      background-color: $colour-greyscale-100;
+      border-color: $colour-greyscale-200;
+      color: $colour-greyscale-black;
     }
   }
+
   .goa-container--primary {
     .mat-card-header {
-      background: #0081a2;
-   }
+      background: $colour-brand-default;
+      color: $colour-text-light;
+    }
   }
+
   .goa-container--info {
     &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
-      background: #005daa11;
-      border-color: #005daa;
+      background: $colour-primary-50;
+      border-color: $colour-status-info-default;
     }
+
     &.goa-container--accent-thin {
-      border-top: 0.5rem solid #0081a2;
+      border-top: $spacing-xs solid $colour-brand-default;
     }
+
     &.goa-container--accent-thick {
-      border-top: 1.5rem solid #0081a2;
+      border-top: $spacing-l solid $colour-brand-default;
     }
   }
+
   .goa-container--error {
     &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
-      background: #ec040b11;
-      border-color: #ec040b;
+      background: $colour-emergency-50;
+      border-color: $colour-status-emergency-default;
     }
+
     &.goa-container--accent-thin {
-      border-top: 0.5rem solid #ec040b;
+      border-top: $spacing-xs solid $colour-interactive-error;
     }
+
     &.goa-container--accent-thick {
-      border-top: 1.5rem solid #ec040b;
+      border-top: $spacing-l solid $colour-interactive-error;
     }
   }
+
   .goa-container--success {
     &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
-      background: #00853f11;
-      border-color: #00853f;
+      background: $colour-success-50;
+      border-color: $colour-status-success-default;
     }
+
     &.goa-container--accent-thin {
-      border-top: 0.5rem solid #00853f;
+      border-top: $spacing-xs solid $colour-status-success-default;
     }
+
     &.goa-container--accent-thick {
-      border-top: 1.5rem solid #00853f;
+      border-top: $spacing-l solid $colour-status-success-default;
     }
   }
+
   .goa-container--important {
     &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
-      background: #feba3511;
-      border-color: #feba35;
+      background: $colour-warn-50;
+      border-color: $colour-interactive-focus;
     }
+
     &.goa-container--accent-thin {
-      border-top: 0.5rem solid #feba35;
+      border-top: $spacing-xs solid $colour-interactive-focus;
     }
+
     &.goa-container--accent-thick {
-      border-top: 1.5rem solid #feba35;
+      border-top: $spacing-xs solid $colour-interactive-focus;
     }
   }
-  @media (min-width: 320px) {
-    margin: 0 auto;
-  }
+
   .mat-card-content {
-    font-family: var(--font-family);
-    font-size: $font-size-4;
-    font-weight: $font-weight-regular;
-    line-height: $line-height-3;
     padding: 1rem;
     .mat-card-title {
       font-weight: $font-weight-regular;
@@ -99,37 +109,34 @@ Mat card
   }
   .mat-card-image {
     width: calc(100% + 0px);
-    margin: 0 0px 0px 0px;
+    margin: 0 0 0 0;
   }
   .mat-card-header {
     border-style: solid;
-    border-width: 1px;
+    border-width: ($border-width-s)*1px;
     border-radius: $radius $radius 0 0;
-    font-weight: 700;
-    font-size: var(--fs-base);
-    font-family: $font-families-default;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    font-weight: $font-weight-bold;
+    padding-top: $spacing-xs;
+    padding-bottom: $spacing-xs;
     .mat-card-header-text {
-      line-height: 2rem;
-      margin: 0 0.5rem;
+      line-height: $line-height-4;
+      margin: 0 $spacing-xs;
     }
     .mat-card-subtitle,
     .mat-card-subtitle:not(:first-child) {
       margin-bottom: 0;
       margin-top: 0;
-      font-size: 14px;
-    }
-    &.text-white {
-      .mat-card-subtitle {
-        color: rgba(255, 255, 255, 0.7);
-      }
     }
   }
+
   .mat-card-subtitle {
     margin-bottom: 20px;
   }
+
   .mat-card-actions {
-    margin: 0px !important;
+    margin: 0 !important;
+  }
+  @media (min-width: 320px) {
+    margin: 0 auto;
   }
 }

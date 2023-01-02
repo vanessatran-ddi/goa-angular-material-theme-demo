@@ -1,14 +1,10 @@
 .mat-chip {
-  font-family: $font-families-default;
-  /* Greyscale/Gray 700 */
-  font-style: normal;
   font-weight: $font-weight-regular;
   font-size: $font-size-3;
   line-height: $font-size-7;
-  color: $colour-text-default;
   &.mat-standard-chip {
     background:none;
-    border: 1px solid $colour-text-secondary;
+    border: ($border-width-s)*1px solid $colour-text-secondary;
     border-radius: 1rem;
     &.mat-warn {
       background: $colour-status-emergency-light;

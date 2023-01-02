@@ -1,22 +1,20 @@
 textarea, input{
   &.mat-input-element {
     display: inline-block;
-    color: var(--goa-color-text);
-    font-size: var(--input-font-size);
-    padding: var(--input-padding);
-    line-height: calc(40px - calc(var(--input-padding) * 2));
+    color: $colour-greyscale-black;
+    padding: $input-padding;
     background-color: transparent;
-    border: 1px solid var(--color-gray-600);
-    border-radius: var(--input-border-radius);
+    border: ($border-width-s)*1px solid $colour-text-secondary;
+    border-radius: $input-border-radius;
     &:not(.mat-form-field-invalid) {
       &:focus {
-        box-shadow: 0 0 0 3px #feba35;
+        box-shadow: 0 0 0 3px $colour-interactive-focus;
       }
     }
     &:disabled {
-      color: var(--goa-color-text-secondary);
-      background-color: var(--color-gray-100);
-      border-color: var(--color-gray-200);
+      color: $goa-color-text-secondary;
+      background-color: $goa-color-text-disabled;
+      border-color: $goa-color-text-disabled-border;
       cursor: default;
       box-shadow: none;
     }
@@ -26,10 +24,10 @@ textarea, input{
   height: 0!important;
 }
 .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button .mat-icon, .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button .mat-icon{
-  font-size: var(--font-size-1);
+  font-size: $font-size-1;
 }
 .mat-form-field-invalid .mat-input-element {
- border: 2px solid var(--goa-color-interactive--error);
+ border: ($border-width-m)*1px solid $colour-interactive-error;
 }
 .mat-form-field-appearance-legacy .mat-form-field-label {
   top: 2rem;

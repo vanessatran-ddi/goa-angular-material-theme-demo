@@ -1,14 +1,35 @@
-/*
-Template Name: Material Pro Admin
-Author: Themedesigner
-Email: niravjoshi87@gmail.com
-File: scss
-*/
 // Variables
 @import "@abgov/design-tokens/scss/tokens";
 @import '@abgov/styles/styles.esm.css';
 @import '~@angular/material/theming';
 
+/**Extra variables*/
+/**
+This is for background of Info Container https://ui-components.alberta.ca/?path=/docs/components-container--container-types
+ */
+$colour-primary-50: #005daa11;
+/**
+This is for background of Error Container https://ui-components.alberta.ca/?path=/docs/components-container--container-types
+ */
+$colour-emergency-50: #ec040b11;
+/**
+This is for background of Success Container https://ui-components.alberta.ca/?path=/docs/components-container--container-types
+ */
+$colour-success-50: #00853f11;
+/**
+This is for background of Warn Container https://ui-components.alberta.ca/?path=/docs/components-container--container-types
+ */
+$colour-warn-50: #feba3511;
+/**
+This is for a disabled primary button.
+ */
+$colour-primary-disabled: rgba(0, 112, 196, 0.5);
+$colour-warn-disabled: rgba(218, 41, 28, 0.5);
+$input-padding: 0.5rem;
+$input-border-radius: 0.25rem;
+$goa-color-text-secondary: #666666; // For disable input text
+$goa-color-text-disabled: #f1f1f1;
+$goa-color-text-disabled-border: #dcdcdc;
 /*Material Theme Colors*/
 $goa-primary-palette: (
   50: #e0eef8,
@@ -42,7 +63,7 @@ $goa-primary-palette: (
     A700: #000000,
   ),
 );
-$primary: mat-palette($goa-primary-palette, 500);
+$primary: mat-palette($goa-primary-palette);
 
 $goa-accent-palette: (
   50: #e0efe7,
@@ -76,9 +97,9 @@ $goa-accent-palette: (
     A700: #000000,
   ),
 );
-$accent: mat-palette($goa-accent-palette, 500);
+$accent: mat-palette($goa-accent-palette);
 
-$goa-destructive-palette: (
+$goa-emergency-palette: (
   50: #ffebee,
   100: #ffcdd2,
   200: #ef9a9a,
@@ -110,22 +131,59 @@ $goa-destructive-palette: (
     A700: $light-primary-text,
   )
 );
-$warn: mat-palette($goa-destructive-palette, 900);
-$theme: mat-light-theme($primary, $accent, $warn);
-$background: map-get($theme, background);
-$foreground: map-get($theme, foreground);
-
+$warn: mat-palette($goa-emergency-palette, 900);
 @include mat-core();
-
-$custom-typography: mat-typography-config(
-  $font-family: 'Poppins, sans-serif'
+$goa-typography: mat-typography-config(
+  $font-family: $font-families-default,
+  $body-1: mat-typography-level(
+      $font-size-4,
+      $line-height-2,
+      $font-weight-regular
+  ),
+  $body-2: mat-typography-level(
+      $font-size-4,
+      $line-height-2,
+      $font-weight-bold
+  ),
+  $headline: mat-typography-level(
+      $font-size-10,
+      $line-height-7,
+      $font-weight-bold
+  ),
+  $title: mat-typography-level(
+      $font-size-9,
+      $line-height-6,
+      $font-weight-regular
+  ),
+  $subheading-2: mat-typography-level(
+      $font-size-7,
+      $line-height-4,
+      $font-weight-regular
+  ),
+  $subheading-1: mat-typography-level(
+      $font-size-4,
+      $line-height-3,
+      $font-weight-bold
+  ),
+  $caption: mat-typography-level(
+      $font-size-7,
+      $line-height-4,
+      $font-weight-regular
+  ),
+  $button: mat-typography-level(
+      $font-size-4,
+      $line-height-2,
+      $font-weight-regular
+  )
 );
 
-// Override the typography in the core CSS.
-@include mat-core($custom-typography);
-
-// Default Theme
+@include mat-core($goa-typography);
+$theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
+// Extra variables
+$radius: ($border-radius-4)*1px;
+
+
 
 // Dark Theme
 
@@ -193,5 +251,5 @@ $border: rgba(120, 130, 140, 0.13);
 $table-border: #f3f1f1;
 $card-brd: #d7dfe3;
 $dark-text: #848a96;
-$radius: 4px;
+
 $form-brd: #d9d9d9;

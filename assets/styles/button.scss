@@ -1,8 +1,4 @@
 .mat-button-base{
-  font-family: $font-families-default;
-  font-weight: 400;
-  font-size: $font-size-4;
-  border-radius: $border-radius-4 * 1px;
   &.mat-button{
     &.mat-primary {
       text-align: center;
@@ -19,7 +15,7 @@
         border: ($border-width-l * 1px) solid $colour-interactive-focus;
       }
       &.mat-button-disabled {
-        color: rgba(0, 112, 196, 0.5);
+        color: $colour-primary-disabled;
         background:inherit;
       }
     }
@@ -36,7 +32,7 @@
         border: ($border-width-l * 1px) solid $colour-interactive-focus;
       }
       &.mat-button-disabled {
-        background: rgba(0, 112, 196, 0.5);
+        background: $colour-primary-disabled;
         color: $colour-text-light;
       }
     }
@@ -53,7 +49,7 @@
         }
       }
       &.mat-button-disabled {
-        background: rgba(218, 41, 28, 0.5);
+        background: $colour-warn-disabled;
         color: $colour-text-light;
       }
     }
@@ -69,8 +65,8 @@
       }
       &.mat-button-disabled {
         background: $colour-text-light;
-        border: ($border-width-m * 1px) solid rgba(0, 112, 196, 0.5);
-        color: rgba(0, 112, 196, 0.5);
+        border: ($border-width-m * 1px) solid $colour-primary-disabled;
+        color: $colour-primary-disabled;
       }
     }
   }

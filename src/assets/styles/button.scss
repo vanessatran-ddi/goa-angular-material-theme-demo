@@ -4,7 +4,6 @@
       text-align: center;
       letter-spacing: 0.01em;
       text-decoration-line: underline;
-      /* Interactive/Default */
       color: $colour-interactive-default;
       &:hover{
         background: $colour-greyscale-100;
@@ -21,19 +20,21 @@
     }
   }
   &.mat-raised-button {
-    color: $colour-text-light;
+    &.mat-button-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+      color:  $colour-text-light;
+    }
     &.mat-primary {
       background: $colour-interactive-default;
       &:hover {
         background: $colour-interactive-hover;
       }
       &:focus {
-        background: $colour-interactive-hover;
-        border: ($border-width-l * 1px) solid $colour-interactive-focus;
-      }
-      &.mat-button-disabled {
-        background: $colour-primary-disabled;
-        color: $colour-text-light;
+        box-shadow: 0 0 0 3px $colour-interactive-focus;
+        border-color: $colour-interactive-hover;
+        background-color: $colour-interactive-hover;
+        outline: none;
       }
     }
     &.mat-warn {
@@ -43,14 +44,10 @@
           background: $colour-status-emergency-dark;
         }
         &:focus {
-          background: $colour-status-emergency-dark;
-          /* Interactive/Focus */
-          border: ($border-width-l * 1px) solid $colour-interactive-focus;
+          color: $colour-text-light;
+          background-color: $colour-status-emergency-default;
+          border-color: $colour-status-emergency-default;
         }
-      }
-      &.mat-button-disabled {
-        background: $colour-warn-disabled;
-        color: $colour-text-light;
       }
     }
   }

@@ -12,3 +12,6 @@
 .example-margin {
   margin: 0 10px;
 }
+.mat-checkbox-frame:focus {
+  border: 1px solid var(--goa-color-interactive--hover)!important;
+}

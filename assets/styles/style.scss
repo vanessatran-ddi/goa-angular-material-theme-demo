@@ -1,13 +1,14 @@
-@import "@abgov/angular-material/default/styles.min.css";
-@import 'variable';
-//@import 'card';
-//@import 'button';
-//@import 'checkbox';
-//@import 'chip';
-//@import 'dropdown';
-//@import 'input';
-//@import 'radio';
+//@import "@abgov/angular-material/default/styles.min.css";
 
+@import 'variable';
+@import 'card';
+@import 'button';
+@import 'checkbox';
+@import 'chip';
+@import 'dropdown';
+@import 'input';
+@import 'radio';
+@import 'dialog';
 
 // App level
 @import 'app';

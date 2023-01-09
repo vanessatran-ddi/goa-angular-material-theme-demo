@@ -1,28 +1,63 @@
-span.mat-checkbox-inner-container {
-  width: $line-height-2;
-  height: $line-height-2;
-}
-
-.mat-checkbox-frame {
-  background: $colour-text-light !important;
-  border: ($border-width-s)*1px solid $colour-greyscale-600 !important;
-}
-
-.mat-checkbox-layout {
+.mat-checkbox {
+  font-style: normal;
+  span.mat-checkbox-inner-container {
+    width: $line-height-2;
+    height: $line-height-2;
+    //Hover should not show circle around item
+    &:hover, &:focus, &:active, &:visited {
+      span.mat-checkbox-ripple {
+        height: 0 !important;
+        width: 0 !important;
+      }
+    }
+  }
+  &.mat-checkbox-disabled {
+    opacity: 0.4;
+    .mat-checkbox-label {
+      color: #333333;
+    }
+  }
   .mat-checkbox-label {
     line-height: $line-height-7;
   }
-}
-
-.mat-checkbox-checked {
+  // Primary checkbox
   &.mat-primary {
-    &.mat-checkbox-background {
-      background: $colour-interactive-default;
+    // Border of the primary checkbox
+    .mat-checkbox-frame {
+      background: $colour-text-light !important;
+      border: ($border-width-s)*1px solid $colour-greyscale-600 !important;
+    }
+    &:hover {
+      .mat-checkbox-frame {
+        border: 1px solid var(--goa-color-interactive--hover) !important;
+      }
+    }
+
+    &.mat-checkbox-checked {
+      .mat-checkbox-background {
+        background-color: var(--goa-color-interactive);
+      }
+
+      &:hover {
+        .mat-checkbox-background {
+          background-color: var(--goa-color-interactive--hover);
+        }
+      }
+    }
+  }
+  &.mat-warn {
+    // Border of the error checkbox
+    .mat-checkbox-frame {
+      border: ($border-width-s)*1px solid var(--goa-color-status-emergency) !important;
+    }
+    &.mat-checkbox-checked {
+      .mat-checkbox-background {
+        background-color: white!important;
+        border: 1px solid var(--goa-color-status-emergency) !important;
+      }
+      .mat-checkbox-checkmark-path {
+        stroke: red !important;
+      }
     }
   }
 }
-
-.mat-checkbox {
-  font-style: normal;
-}
-

@@ -1,68 +1,128 @@
-.mat-button-base{
-  &.mat-button{
+button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.mat-button .mat-button-wrapper>* {
+  display: inline-block;
+}
+.mat-icon-button {
+  &.mat-button-base {
+    &.mat-primary:hover{
+      background-color: var(--color-gray-100);
+      border-color: var(--color-gray-100);
+      border-radius: 0.5rem;
+      color: var(--goa-color-interactive--hover);
+      outline: none;
+    }
+  }
+}
+.mat-button-base {
+  // Base button
+  height: 2.625rem;
+  font-family:$font-families-default;
+  font-size: $font-size-5;
+  letter-spacing: 0.5px;
+  padding: 0 0.75rem;
+  align-items: center;
+  // Tertiary button
+  &.mat-button {
     &.mat-primary {
       text-align: center;
       letter-spacing: 0.01em;
       text-decoration-line: underline;
-      /* Interactive/Default */
       color: $colour-interactive-default;
-      &:hover{
-        background: $colour-greyscale-100;
+
+      &:hover {
+        border-color: $colour-greyscale-100;
+        color: $colour-interactive-hover;
+        background-color: $colour-greyscale-100;
       }
+
       &:focus {
-        background: $colour-greyscale-100;
-        /* Interactive/Focus */
-        border: ($border-width-l * 1px) solid $colour-interactive-focus;
+        border-color: $colour-greyscale-100;
+        background-color: $colour-greyscale-100;
+        color: $colour-interactive-hover;
+        box-shadow: 0 0 0 3px $colour-interactive-focus;
+        outline: none;
       }
+
       &.mat-button-disabled {
         color: $colour-primary-disabled;
-        background:inherit;
+        background: inherit;
       }
     }
   }
+
+  // Primary button
   &.mat-raised-button {
-    color: $colour-text-light;
+    strong {
+      vertical-align: baseline;
+    }
+    &:not([class*=mat-elevation-z]) {
+      box-shadow: none;
+    }
+
+    &.mat-button-disabled {
+      color: $colour-text-light;
+    }
+
     &.mat-primary {
       background: $colour-interactive-default;
+
       &:hover {
-        background: $colour-interactive-hover;
+        border-color: $colour-interactive-hover;
+        background-color: $colour-interactive-hover;
       }
+
       &:focus {
-        background: $colour-interactive-hover;
-        border: ($border-width-l * 1px) solid $colour-interactive-focus;
-      }
-      &.mat-button-disabled {
-        background: $colour-primary-disabled;
-        color: $colour-text-light;
+        box-shadow: 0 0 0 3px $colour-interactive-focus;
+        border-color: $colour-interactive-hover;
+        background-color: $colour-interactive-hover;
+        outline: none;
       }
     }
+
     &.mat-warn {
-      background: $colour-interactive-error;
+      //TODO: Change background-color $color-emergency-default
+      background: #DA291C;
+
       &:not(.mat-button-disabled) {
         &:hover {
-          background: $colour-status-emergency-dark;
+          background-color: $colour-status-emergency-dark;
+          border-color: $colour-status-emergency-dark;
         }
+
         &:focus {
-          background: $colour-status-emergency-dark;
-          /* Interactive/Focus */
-          border: ($border-width-l * 1px) solid $colour-interactive-focus;
+          background-color: $colour-status-emergency-dark;
+          border-color: $colour-status-emergency-dark;
+          box-shadow: 0 0 0 3px $colour-interactive-focus;
+          outline: none;
+          color: $colour-text-light;
         }
-      }
-      &.mat-button-disabled {
-        background: $colour-warn-disabled;
-        color: $colour-text-light;
       }
     }
   }
+
+  // Secondary button
   &.mat-stroked-button {
     background: $colour-text-light;
+
     &.mat-primary {
       border: ($border-width-m * 1px) solid $colour-interactive-default;
-      &:hover, &:focus{
-        background: $colour-greyscale-100;
-        /* Interactive/Hover */
-        border: ($border-width-m * 1px) solid $colour-interactive-hover;
+
+      &:hover {
+        order-color: $colour-interactive-hover;
+        color: $colour-interactive-hover;
+        background-color: $colour-greyscale-100;
       }
+
+      &:focus {
+        border-color: $colour-interactive-hover;
+        box-shadow: 0 0 0 3px $colour-interactive-focus;
+        background-color: $colour-greyscale-100;
+        outline: none;
+      }
+
       &.mat-button-disabled {
         background: $colour-text-light;
         border: ($border-width-m * 1px) solid $colour-primary-disabled;
@@ -71,4 +131,3 @@
     }
   }
 }
-

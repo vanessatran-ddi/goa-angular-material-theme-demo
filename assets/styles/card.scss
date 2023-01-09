@@ -6,7 +6,9 @@ Mat card
   background-color: $colour-greyscale-white;
   overflow: hidden;
   padding: 0 !important;
-
+  &:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
   .goa-container--non-interactive {
     &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
       background: $colour-greyscale-100;

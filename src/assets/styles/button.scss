@@ -5,6 +5,17 @@ button:disabled {
 .mat-button .mat-button-wrapper>* {
   display: inline-block;
 }
+.mat-icon-button {
+  &.mat-button-base {
+    &.mat-primary:hover{
+      background-color: var(--color-gray-100);
+      border-color: var(--color-gray-100);
+      border-radius: 0.5rem;
+      color: var(--goa-color-interactive--hover);
+      outline: none;
+    }
+  }
+}
 .mat-button-base {
   // Base button
   height: 2.625rem;
@@ -20,7 +31,6 @@ button:disabled {
       letter-spacing: 0.01em;
       text-decoration-line: underline;
       color: $colour-interactive-default;
-
       &:hover {
         border-color: $colour-greyscale-100;
         color: $colour-interactive-hover;

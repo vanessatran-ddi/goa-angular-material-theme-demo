@@ -15,6 +15,7 @@
   "dependencies": {
     "@abgov/design-tokens": "^1.0.4",
     "@abgov/styles": "^1.1.0",
+    "@abgov/angular-material-theme": "/Users/thytran142/WebstormProjects/angular-material-theme",
     "@angular/animations": "11.0.2",
     "@angular/cdk": "^11.0.1",
     "@angular/common": "11.0.2",

@@ -7,28 +7,30 @@
       &lt;mat-form-field&gt;&lt;mat-label&gt;Favourite Food&lt;/mat-label&gt;<br/>
       &lt;input matInput&gt;&lt;/mat-form-field&gt;
     </code>
+    <br/>
+    <br/>
     <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-icon matPrefix>mode_edit</mat-icon>
-        <input type="tel" matInput>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-      </mat-form-field>
+      <p>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </p>
     </form>
     <h4>Disabled input</h4>
     <form class="example-form">
-      <mat-form-field class="example-full-width">
+      <mat-form-field appearance="outline">
         <input matInput type="text" disabled value="Disabled">
       </mat-form-field>
     </form>
     <h4>Error state</h4>
     <form class="example-form">
-      <mat-form-field class="example-full-width">
+      <mat-form-field appearance="outline">
         <input type="email" matInput [formControl]="emailFormControl">
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
           Please enter a valid email address
@@ -37,16 +39,20 @@
           Email is required.
         </mat-error>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
+      <p>
+      <mat-form-field appearance="outline">
         <input matInput maxlength="5" value="12345">
         <mat-hint align="start">5 is maximum</mat-hint>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput [matDatepicker]="picker">
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker">
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </p>
     </form>
   </mat-card-content>
 </mat-card>

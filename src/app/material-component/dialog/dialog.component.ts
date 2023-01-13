@@ -3,7 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 
 @Component({
   selector: 'app-dialog-overview-example-dialog',
-  template: `<h1 mat-dialog-title>Heading</h1>
+  template: `<div mat-dialog-title>Heading</div>
 <div mat-dialog-content>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia obcaecati id molestiae,

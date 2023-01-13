@@ -1,6 +1,7 @@
 <mat-card>
   <mat-card-content>
     <mat-card-title>Container</mat-card-title>
+    <br/>
     <p>
       Containers are used to group information, create hierarchy,
       facilitate navigation, highlight a feature, or promote a call-to-action.
@@ -79,7 +80,7 @@
             </p>
           </mat-card-content>
         </mat-card>
-        <mat-card class="goa-container--important goa-container--accent-thin">
+        <mat-card class="goa-container--info goa-container--accent-thin">
           <mat-card-content>
             <h2>Interactive Container w/ Header</h2>
             <p>
@@ -128,12 +129,12 @@
         </mat-card>
         <mat-card class="goa-container--non-interactive goa-container--accent">
           <mat-card-header>
-            <mat-card-title-group>
+            <mat-card-title-group fxLayoutAlign="center center">
               Heading
             </mat-card-title-group>
             <div fxFlex></div>
-            <div fxLayoutAlign="center center">
-              <button mat-raised-button color="warn">Click me!</button>
+            <div fxLayoutAlign="center center" style="margin-right: 10px;">
+              <button mat-raised-button color="primary">Click me!</button>
             </div>
           </mat-card-header>
           <mat-card-content>

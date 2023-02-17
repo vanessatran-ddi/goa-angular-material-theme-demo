@@ -12,8 +12,8 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
   </p>
 </div>
 <mat-dialog-actions  align="end">
-  <button mat-raised-button color="primary" [mat-dialog-close]="1" tabindex="2">Primary</button>
   <button mat-stroked-button color="primary" (click)="onNoClick()" tabindex="-1">Secondary</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="1" tabindex="2">Primary</button>
 </mat-dialog-actions>`
 })
 export class DialogOverviewExampleDialogComponent {

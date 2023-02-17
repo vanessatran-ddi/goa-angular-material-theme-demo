@@ -30,6 +30,7 @@
     </form>
     <h4>Error state</h4>
     <form class="example-form">
+      <p>
       <mat-form-field appearance="outline">
         <input type="email" matInput [formControl]="emailFormControl">
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -39,6 +40,7 @@
           Email is required.
         </mat-error>
       </mat-form-field>
+      </p>
       <p>
       <mat-form-field appearance="outline">
         <input matInput maxlength="5" value="12345">
